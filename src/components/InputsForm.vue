@@ -31,7 +31,7 @@ name: 'InputsForm'
   width: 280px;
   background-color: $white;
   border-radius: 7px;
-  box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.212);
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.212);
   img{
     width: 40px;
     border-radius: 50%;
