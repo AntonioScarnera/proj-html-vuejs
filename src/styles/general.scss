@@ -1,0 +1,21 @@
+
+@import "~bootstrap/scss/bootstrap.scss";
+
+
+$fa-font-path: './webfonts';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '~@fortawesome/fontawesome-free/scss/solid.scss';
+@import '~@fortawesome/fontawesome-free/scss/regular.scss';
+
+
+@import './vars.scss';
+
+body{
+    font-family: $main-font;
+    background-color: $white;
+}
+
+.mycontainer{
+    width: 95%;
+    margin: 0 auto;
+}
