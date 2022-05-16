@@ -18,9 +18,7 @@
               
               <li @click="flag === 0 || flag === 1 ? flag = dropdowns[1].id : flag = 0" class="dropdown">{{dropdowns[1].txt}} <i class="fa-solid fa-angle-down"></i>
                 <div class="dropdown-content" :class="{'active': dropdowns[1].id === flag}">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
+                        <a href="" v-for="(link, index) in  serviceLinks" :key="index">{{link}}</a>
                 </div>
               </li>
 
@@ -44,6 +42,8 @@
 </template>
 
 <script>
+import {service} from '../dati.js';
+
 export default {
 name: 'NavbarComp',
 data(){
@@ -58,17 +58,12 @@ data(){
                 txt: 'Service',
                 id: 2
             }
-            ]
+            ],
+        serviceLinks: service
     }
 },
 methods:{
-    active(){
-        if(this.flag === false){
-            return this.flag = true;
-        }else{
-            return this.flag = false;
-        }
-    }
+
 }
 }
 </script>
@@ -94,9 +89,10 @@ methods:{
     }
     .dropdown-content a {
         color: black;
-        padding: 12px 16px;
+        padding: 8px 10px;
         text-decoration: none;
         display: block;
+        font-size: 14px;
     }    
 
 

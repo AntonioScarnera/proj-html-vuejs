@@ -11,15 +11,18 @@
 
       <!-- Creazione sezione per il Jumbotron -->
       <section id="jumbo">
-
-        <div>
-          
-        </div>
-
-        <div>
-
-          <!-- Aggiunta componente per il gruppo di input -->
-          <inputs-form/>
+        <div class="container d-flex justify-content-between align-items center h-100">
+          <div class="jumbo-text">
+            <h1>Unlock Your Online Growth Potential</h1>
+            <p>
+              Online marketing to secure customer retention, leads, and sales. We focus on the bigger picture.
+            </p>
+            <button>Our Services <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+          <div class="jumbo-form">
+            <!-- Aggiunta componente per il gruppo di input -->
+            <inputs-form class="input-form"/>
+          </div>
         </div>
 
       </section>
@@ -104,6 +107,34 @@ export default {
     nav{
       height: 100%;
     }
+
+    #jumbo{
+      background-image: url('./assets/images/demo-marketing-consultant.jpg');
+      height: 500px;
+      background-size: cover;
+      background-position: top;
+
+      .jumbo-text{
+        color: $white;
+        padding-top: 50px;
+        padding-right: 30px;
+        width: 50%;
+        p{
+          padding-right: 80px;
+        }
+      }
+      .jumbo-form{
+        width: 50%;
+        position: relative;
+        .input-form{
+          position: absolute;
+          bottom: -30px;
+          left: 40px;
+        }
+      }
+      
+    }
   }
+
 
 </style>
