@@ -20,4 +20,25 @@ const company = [
     'careers'
 ]
 
-export {service, resources, company};
+const logos = [
+    {
+       url: require('./assets/images/abstract.png')
+    },
+    {
+       url: require('./assets/images/cglobal.png')
+    },
+    {
+       url: require('./assets/images/next.png')
+    },
+    {
+       url: require('./assets/images/hemisferio.png')
+    },
+    {
+       url: require('./assets/images/spaces.png')
+    },
+    {
+       url: require('./assets/images/digitalbox.png')
+    }  
+]
+
+export {service, resources, company, logos};
