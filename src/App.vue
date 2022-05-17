@@ -108,7 +108,7 @@
 
       <!-- Creazione sezione 3 -->
       <section id="sec-3">
-        <div class="container">
+        <div class="container mb-5">
           <h4 class="text-center my-5 fw-bold fs-3">Trusted by Leading Organisations</h4>
           <div class="row align-items-center">
             <div class="card col-4 border-0">
@@ -151,18 +151,91 @@
       </section>
 
       <!-- Creazione sezione 4 -->
-      <section id="sec-4">
-        
+      <section id="sec-4" class="p-5">
+        <div class="container">
+          <div class="row flex-wrap">
+            <div class="col-6 p-5">
+              <h5 class="fw-bold fs-3">We Boost Our Clients' Bottom Line by Optimizing Their Growth Potential.</h5>
+              <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci id laborum quo! Natus, asperiores enim!</p>
+              <button class="mybtn">Why Work With Us</button>
+            </div>
+            <div class="col-6">
+              <img src="./assets/images/we-boost-our-clients.jpg" class="w-100">
+            </div>
+            <div class="col-6 p-5">
+              <span class="d-block fw-bold pb-1 fs-5">We Build Relationships</span>
+              <p class="subtitles pb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione laboriosam laudantium tempore officia aliquid. Tenetur!</p>
+
+              <span class="d-block fw-bold pb-1 fs-5">Proprietary Processes</span>
+              <p class="subtitles">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione laboriosam laudantium tempore officia aliquid. Tenetur!</p>
+            </div>
+            <div class="col-6 p-5">
+              <span class="d-block fw-bold fs-6">Accountability</span>
+              <p class="subtitles">Lorem ipsum dolor sit amet.</p>
+              <span class="d-block fw-bold fs-6">Transparency</span>
+              <p class="subtitles">Lorem ipsum dolor sit amet.</p>
+              <span class="d-block fw-bold fs-6">Investment</span>
+              <p class="subtitles">Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+          <div>
+            <span class="text-center d-block fw-bold">Awards</span>
+            <div class="row align-items-center text-center">
+              <span class="col-3" v-for="(item, index) in premi" :key="index">
+                <img class="w-100 d-block" :src="item.url" :style="item.color">
+                <span class="award-name d-block">{{item.name}}</span>
+                <span class="award-year">{{item.year}}</span>
+              </span>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- Creazione sezione 5 -->
       <section id="sec-5">
-
+        <div class="container my-5">
+          <div class="row gap-5 align-items-center justify-content-between">
+            <div class="col-5">
+              <img src="./assets/images/large-testimonial.jpg" class="w-100">
+            </div>
+            <div class="col-5">
+              <div class="w-75">
+                <p class="fw-bold text d-block">"The team at Avada Marketing Consultant is fabulous. They helped us unlock our potential online and offline. We have experienced year on year grouth due to their progressive approach."</p>
+                <span class="name d-block fw-bold">Kate Schadler</span>
+                <span class="role">Marketing Consultant - Abstract</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- Creazione sezione 6 -->
       <section id="sec-6">
+        <div class="container py-5">
+          <div class="row align-items-end justify-content-between">
+            <div class="col-5">
+              <h6 class="fs-2 fw-bold">Marketing Resouces: Insider Advice on How to Increase Online Sales</h6>
+            </div>
+            <div class="col-3">
+              <button class="mybtn">Explore All Resources</button>
+            </div>
+          </div>
+          <div class="row align-items-center justify-content-between my-5">
+            <div class="col-4">
+              <img class="w-100 d-block" src="./assets/images/blog-posts-6.jpg">
+              <span class="fw-bold">Marketing Tips And Tricks For Your Website</span>
+            </div>
+            <div class="col-4">
+              <img class="w-100 d-block" src="./assets/images/blog-posts-5.jpg">
+              <span class="fw-bold">How to Write Stunning Blog Post Titles</span>
+            </div>
+            <div class="col-4">
+              <img class="w-100 d-block" src="./assets/images/blog-posts-4.jpg">
+              <span class="fw-bold">Techniques to Reduce Facebook Ads Spend</span>
+            </div>
 
+          </div>
+        </div>
       </section>
 
     </main>
@@ -189,7 +262,7 @@
 <script>
 import InputsForm from './components/InputsForm.vue'
 import NavbarComp from './components/NavbarComp.vue'
-import {logos} from './dati.js'
+import {logos, awards} from './dati.js'
 
 export default {
   name: 'App',
@@ -200,7 +273,8 @@ export default {
   },
   data(){
     return{
-      brands: logos
+      brands: logos,
+      premi: awards
     }
   }
 }
@@ -251,6 +325,7 @@ export default {
     }
 
     #sec-1{
+      background-color: $white;
       margin-top: 100px;
       padding: 0 120px;
       img{
@@ -321,13 +396,46 @@ export default {
       }
     }
 
+    .subtitles{
+      font-size: 11px;
+      color: $tundora;
+    }
     #sec-3{
-      .subtitles{
-        font-size: 11px;
-        color: $tundora;
+    }
+
+    #sec-4{
+      background-color: $gray-nurse;
+      .text{
+        font-size: 13px;
+      }
+      .award-name{
+        font-size: 12px;
+      }
+      .award-year{
+        font-size: 10px;
       }
     }
 
+    #sec-5{
+      .text{
+        font-size: 15px;
+      }
+      .name{
+        font-size: 12px;
+      }
+      .role{
+        font-size: 10px;
+        color: $tundora;
+      }
+      img{
+        border-radius: 5px;
+        box-shadow: 2px 2px 8px black;
+      }
+    }
+
+    #sec-6{
+      background-color: $gray-nurse;
+    }
 
 
 
