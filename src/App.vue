@@ -39,6 +39,7 @@
               <img src="./assets/svg/img1.svg">
             </div>
             <div class="sec-1-txt">
+              <span class="my-circle" style="background-color: blue">a</span>
               <span>Busines Growth</span>
               <h2>Increase Brand Awareness</h2>
               <p>
@@ -50,6 +51,7 @@
 
           <div class="w-100 d-flex justify-content-start align-items-center gap-5 mb-4">
             <div class="sec-1-txt w-50">
+              <span class="my-circle" style="background-color: goldenrod">b</span>
               <span>Investors In People</span>
               <h2>In-House Sales Training</h2>
               <p>
@@ -67,6 +69,7 @@
               <img src="./assets/svg/img3.svg">
             </div>
             <div class="sec-1-txt">
+              <span class="my-circle" style="background-color: green">c</span>
               <span>Social Media Analysis</span>
               <h2>Harness Your Social Proof</h2>
               <p>
@@ -89,12 +92,14 @@
             </span>
           </div>
           <div class="contact d-flex align-items-center justify-content-around">
-            <div>
-              <img src="./assets/images/marketing-expert-cta.png">
-            </div>
-            <div class="text-start">
-              <span class="d-block name">Sandy Reiff</span>
-              <span class="role">Marketing Consultant Expert</span>
+            <div class="d-flex align-items-center gap-3">
+              <div>
+                <img src="./assets/images/marketing-expert-cta.png">
+              </div>
+              <div class="text-start">
+                <span class="d-block name">Sandy Reiff</span>
+                <span class="role">Marketing Consultant Expert</span>
+              </div>
             </div>
             <p class="m-0">Drive Leads and Sales with Avada</p>
             <button class="number">
@@ -170,12 +175,18 @@
               <p class="subtitles">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione laboriosam laudantium tempore officia aliquid. Tenetur!</p>
             </div>
             <div class="col-6 p-5">
-              <span class="d-block fw-bold fs-6">Accountability</span>
-              <p class="subtitles">Lorem ipsum dolor sit amet.</p>
-              <span class="d-block fw-bold fs-6">Transparency</span>
-              <p class="subtitles">Lorem ipsum dolor sit amet.</p>
-              <span class="d-block fw-bold fs-6">Investment</span>
-              <p class="subtitles">Lorem ipsum dolor sit amet.</p>
+
+              <span class="icons"><i class="fa-solid fa-file"></i></span>
+              <span class="fw-bold fs-6">Accountability</span>
+              <p class="subtitles m-0 my-3">Lorem ipsum dolor sit amet.</p>
+
+              <span class="icons"><i class="fa-solid fa-folder-plus"></i></span>
+              <span class="fw-bold fs-6">Transparency</span>
+              <p class="subtitles m-0 my-3">Lorem ipsum dolor sit amet.</p>
+
+              <span class="icons"><i class="fa-solid fa-signal"></i></span>
+              <span class="fw-bold fs-6">Investment</span>
+              <p class="subtitles m-0 my-3">Lorem ipsum dolor sit amet.</p>
             </div>
           </div>
           <div>
@@ -244,14 +255,88 @@
     <!-- Inizio Footer -->
     <footer>
 
-      <div>
-
-      </div>
+      <section class="footer-top py-4">
+        <div class="container">
+          <div class="row align-items-center justify-content-around">
+            <div class="col-4 footer-txt">
+              <span class="d-block footer-title">
+                Let's Make Things Happen
+              </span>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, commodi odit id dolorum voluptatibus fuga eius.
+              </p>
+              <hr>
+              <p class="txt">
+                "The team at Avada Marketing Consultant is fabulous. They helped us unlock our potential online and offline. We have experienced year on year grouth due to their progressive approach."
+              </p>
+              <span class="d-block name">George Anderson</span>
+              <span class="d-block role">Digitalbox CEO</span>
+            </div>
+            <div class="col-4">
+              <inputs-form/>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- sezione link e social -->
-      <div>
-
-      </div>
+      <section class="footer-bottom py-4">
+        <div class="container">
+          <div class="row align-items-start justify-content-between py-5">
+            <div class="col-4">
+              <span>
+                Grow Your Online Business Stategically, and Improve Customer Retention.
+              </span>
+              <div>
+                <span v-for="(item, index) in  socials" :key="index">
+                  <i class="me-3" :class="item"></i>
+                </span>
+              </div>
+            </div>
+            <div class="col-7">
+              <div class="row align-items-start justify-content-between">
+                <div class="col-4">
+                  <span class="link-title">Services</span>
+                  <ul>
+                    <li class="my-2" v-for="(item,index) in services" :key="index">
+                      {{item}}
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-4">
+                  <span class="link-title">Resources</span>
+                  <ul>
+                    <li class="my-2" v-for="(item,index) in resources" :key="index">
+                      {{item}}
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-4">
+                  <span class="link-title">Company</span>
+                  <ul>
+                    <li class="my-2" v-for="(item,index) in company" :key="index">
+                      {{item}}
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-4">
+              <span class="pie">
+                &copy; 2020 &bull; Avada Consultant &bull; Powered by WordPress
+              </span>
+            </div>
+            <div class="col-4">
+              <span class="pie">Call Us (555)802-1234</span>
+            </div>
+            <div class="col-4">
+              <span class="pie">info@yourcompany.com</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
     </footer>
     <!-- Fine Footer -->
@@ -262,7 +347,7 @@
 <script>
 import InputsForm from './components/InputsForm.vue'
 import NavbarComp from './components/NavbarComp.vue'
-import {logos, awards} from './dati.js'
+import {service, resources, company, logos, awards, socials} from './dati.js'
 
 export default {
   name: 'App',
@@ -274,7 +359,11 @@ export default {
   data(){
     return{
       brands: logos,
-      premi: awards
+      premi: awards,
+      socials: socials,
+      services: service,
+      resources: resources,
+      company: company
     }
   }
 }
@@ -292,7 +381,7 @@ export default {
   
   main{
     #jumbo{
-      background-image: url('./assets/images/demo-marketing-consultant.jpg');
+      background-image: url('https://avada.theme-fusion.com/marketing-consultant/wp-content/uploads/sites/142/2020/06/marketing-intro.jpg');
       height: 500px;
       background-size: cover;
       background-position: top;
@@ -302,7 +391,12 @@ export default {
         padding: 12px 15px;
         border-radius: 15px;
         border: 0;
+        border: 3px solid $white;
         box-shadow: 4px 4px 10px black;
+        &:hover{
+          background-color:transparent;
+          color: $white;
+        }
       }
       .jumbo-text{
         color: $white;
@@ -341,7 +435,13 @@ export default {
       }
       .sec-1-txt{
         width: 35%;
-
+      }
+      .my-circle{
+        padding: 6px 11px;
+        border-radius: 50%;
+        color: $white;
+        margin-right: 10px;
+        text-align: center;
       }
     }
     .mybtn{
@@ -350,6 +450,9 @@ export default {
       border: 0;
       border-radius: 10px;
       padding: 5px 15px;
+      &:hover{
+        background-color: $tango;
+      }
     }
 
     #sec-2{
@@ -414,6 +517,18 @@ export default {
       .award-year{
         font-size: 10px;
       }
+      .icons{
+        padding: 8px;
+        border: 2px solid $ecstasy;
+        border-radius: 10px;
+        margin: 4px;
+        i{
+          font-size: 12px;
+          background-color: $ecstasy;
+          padding: 4px;
+          color: $white;
+        }
+      }
     }
 
     #sec-5{
@@ -441,4 +556,56 @@ export default {
 
   }
 
+
+  footer{
+    .footer-top{
+      background-color: $black;
+      .footer-txt{
+        color: $white;
+        .footer-title{
+          font-size: 30px;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+        hr{
+          width: 50px;
+        }
+        .txt{
+          font-size: 12px;
+        }
+        .name{
+          font-size: 12px;
+        }
+        .role{
+          font-size: 10px;
+          color: $tundora;
+        }
+      }
+    }
+
+    .footer-bottom{
+      i{
+        font-size: 12px;
+        cursor: pointer;
+      }
+      ul{
+        padding: 0;
+        list-style: none;
+        li{
+          font-size: 12px;
+          &:hover{
+            text-decoration: underline;
+            cursor: pointer;
+          }
+        }
+      }
+      .link-title{
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .pie{
+        font-size: 10px;
+      }
+    }
+  }
 </style>

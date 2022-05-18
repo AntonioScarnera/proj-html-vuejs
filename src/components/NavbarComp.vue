@@ -10,9 +10,8 @@
 
               <li @click="flag === 0 || flag === 2 ? flag = dropdowns[0].id : flag = 0" class="dropdown">{{dropdowns[0].txt}} <i class="fa-solid fa-angle-down"></i>
                 <div class="dropdown-content" :class="{'active': dropdowns[0].id === flag}">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
+                        <a href="">Home Alternate</a>
+
                 </div>
               </li>
               
@@ -93,6 +92,10 @@ methods:{
         text-decoration: none;
         display: block;
         font-size: 14px;
+        &:hover{
+            text-decoration: underline;
+            font-weight: 700;
+        }
     }    
 
 

@@ -68,4 +68,13 @@ const awards= [
    },
 ]
 
-export {service, resources, company, logos, awards};
+const socials = [
+   'fa-brands fa-facebook-f',
+   'fa-brands fa-twitter',
+   'fa-brands fa-instagram',
+   'fa-brands fa-youtube',
+   'fa-brands fa-linkedin-in',
+   'fa-brands fa-tiktok'
+]
+
+export {service, resources, company, logos, awards, socials};
